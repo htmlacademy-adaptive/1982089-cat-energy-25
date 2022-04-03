@@ -1,0 +1,18 @@
+[33mcommit 4b6ca831494dee1bf0df35170ea5e182425d13d4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31malias/master[m[33m)[m
+Merge: 8fd311e 6a3e3b3
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Wed Mar 30 09:29:00 2022 +0300
+
+    Merge pull request #2 from tyanaten/module1-task1
+
+[33mcommit 6a3e3b32984919bb05e4971e45713cee396a6b2a[m[33m ([m[1;31morigin/module1-task1[m[33m, [m[1;32mmodule1-task1[m[33m)[m
+Author: tyanaten <93289836+tyanaten@users.noreply.github.com>
+Date:   Tue Mar 29 21:59:04 2022 +0300
+
+    Добавляет нового наставника
+
+[33mcommit 8fd311ee9561d1f57038edbef5d88b5272d2ae86[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Tue Mar 29 21:32:08 2022 +0300
+
+    :hatching_chick:
