@@ -1,5 +1,17 @@
 .location-card {
+  display: flex;
+  justify-content: space-between;
   padding: 26px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 565px;
+    padding: 56px 80px;
+    background-color: #ffffff;
+  }
 }
 
 .location-card__slogan {
@@ -12,6 +24,14 @@
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 172px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 163px;
+  }
 }
 
 .location-card__address {
@@ -22,4 +42,12 @@
   line-height: 20px;
   font-weight: 400;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 155px;
+  }
 }

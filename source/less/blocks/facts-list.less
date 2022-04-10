@@ -1,0 +1,23 @@
+.facts-list {
+  display: grid;
+  grid-template-columns: @wrapper-width-mobile;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 78px;
+  }
+}
+
+.facts-list__item {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+}

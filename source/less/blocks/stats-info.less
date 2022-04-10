@@ -1,29 +1,9 @@
-.stats-info__number {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-}
+.stats-info {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 
-.stats-info__description {
-  width: 77px;
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 400;
-  color: #444444;
-  text-align: center;
-}
-
-.stats-info__summary {
-  margin: 0;
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }

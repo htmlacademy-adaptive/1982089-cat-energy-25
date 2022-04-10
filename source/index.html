@@ -2,17 +2,21 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo logo" href="#">
-          <img src="img/logo.svg" alt="Лого" width="33" height="37">
-          <img src="img/site-name.svg" alt="Кэт Энерджи" width="101" height="18">
-        </a>
-        <nav class="main-nav">
+        <div class="main-header__logo-wrapper">
+          <a class="main-header__logo logo" href="#">
+            <img src="img/logo.svg" alt="Лого" width="33" height="37">
+            <img src="img/site-name.svg" alt="Кэт Энерджи" width="101" height="18">
+          </a>
+          <button class="main-header__toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+        <nav class="main-header__nav main-nav">
           <ul class="main-nav__list site-list list-style">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__link link-style" href="#">главная</a>
@@ -25,7 +29,6 @@
             </li>
           </ul>
         </nav>
-        <button class="main-header__toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
     </header>
     <main class="main-index">
@@ -35,12 +38,12 @@
           <div class="advertise__wrapper">
             <h2 class="visually-hidden">Реклама</h2>
             <p class="advertise__slogan">Занялся собой? Займись котом!</p>
-            <img src="img/can-food.png" alt="Банка Cat Energy со вкусом курицы" width="280" height="270">
+            <img class="advertise__background-image" src="img/can-food.png" alt="Банка Cat Energy со вкусом курицы" width="280" height="270">
             <a class="advertise__button button button--main" href="form.html">подобрать программу</a>
           </div>
         </section>
       </div>
-      <section class="programms">
+      <section class="main-index__programms programms">
         <div class="programms__wrapper">
           <h2 class="visually-hidden">Программы</h2>
           <ul class="programms__list option-list list-style">
@@ -67,7 +70,7 @@
           </ul>
         </div>
       </section>
-      <section class="works">
+      <section class="main-index__works works">
         <div class="works__wrapper">
           <h2 class="works__title title">Как это работает</h2>
           <ul class="works__list facts-list list-style">
@@ -94,25 +97,27 @@
           </ul>
         </div>
       </section>
-      <section class="example">
+      <section class="main-index__example example">
         <div class="example__wrapper">
-          <h2 class="example__title title">Живой пример</h2>
-          <p class="example__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__stats stats-info">
-            <dl class="stats-info__list list-style">
-              <div class="stats-info__item">
-                <dt class="stats-info__number">5 КГ</dt>
-                <dd class="stats-info__description">снижение веса</dd>
-              </div>
-              <div class="stats-info__item">
-                <dt class="stats-info__number">60 ДНЕЙ</dt>
-                <dd class="stats-info__description">затрачено времени</dd>
-              </div>
-            </dl>
-            <p class="stats-info__summary">Затраты на питание: 15 000 РУБ.</p>
+          <div class="example__first-part">
+            <h2 class="example__title title">Живой пример</h2>
+            <p class="example__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__stats stats-info">
+              <dl class="stats-info__list stats-list list-style">
+                <div class="stats-list__item">
+                  <dt class="stats-list__number">5 КГ</dt>
+                  <dd class="stats-list__description">снижение веса</dd>
+                </div>
+                <div class="stats-list__item">
+                  <dt class="stats-list__number">60 ДНЕЙ</dt>
+                  <dd class="sstats-list__description">затрачено времени</dd>
+                </div>
+              </dl>
+              <p class="stats-info__summary">Затраты на питание: 15 000 РУБ.</p>
+            </div>
           </div>
           <div class="example__comparison comparison-card">
-            <img src="img/cat-before.png" alt="Кот до преображения" width="280" height="232">
+            <img class="comparison-card__image" src="img/cat-before.png" alt="Кот до преображения" width="280" height="232">
             <div class="comparison-card__indicator comparison-card__indicator--small-version range">
               <div class="range__scale">
                 <span class="range__option">было</span>
@@ -123,7 +128,7 @@
           </div>
         </div>
       </section>
-      <section class="location">
+      <section class="main-index__location location">
         <div class="location__wrapper">
           <h2 class="visually-hidden">Локация</h2>
           <div class="location__info location-card">
@@ -131,7 +136,7 @@
             <address class="location-card__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
           </div>
         </div>
-        <img src="img/location.png" alt="Месторасположение на карте" width="320" height="362">
+        <img class="location__map" src="img/location.png" alt="Месторасположение на карте" width="320" height="362">
       </section>
     </main>
     <footer class="main-footer">
