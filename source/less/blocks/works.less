@@ -1,12 +1,21 @@
-.works {
-  margin-bottom: 49px;
-}
-
 .works__wrapper {
-  width: 280px;
+  width: @wrapper-width-mobile;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+  }
 }
 
 .works__title {
+  margin-bottom: 40px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }

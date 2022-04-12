@@ -3,6 +3,26 @@
 }
 
 .main-form__wrapper {
-  width: 280px;
+  width: @wrapper-width-mobile;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+  }
+}
+
+.main-form__form {
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }

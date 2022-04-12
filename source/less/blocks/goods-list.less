@@ -7,3 +7,20 @@
   color: #000000;
   text-transform: uppercase;
 }
+
+.goods-list {
+  display: grid;
+  grid-template-columns: 280px;
+  row-gap: 13px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 123px;
+    row-gap: 32px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 104px;
+  }
+}

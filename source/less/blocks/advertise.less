@@ -1,6 +1,15 @@
 .advertise__wrapper {
-  width: 280px;
+  width: @wrapper-width-mobile;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+  }
 }
 
 .advertise__slogan {
@@ -12,4 +21,14 @@
   font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+  }
+}
+
+.advertise__background-image {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
 }

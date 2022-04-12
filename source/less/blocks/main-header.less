@@ -1,9 +1,24 @@
-.main-header {
-  width: 320px;
-}
-
 .main-header__wrapper {
   display: flex;
-  width: 280px;
+  flex-direction: column;
+  width: @wrapper-width-mobile;
   margin: 10px auto 17px auto;
+
+  @media (min-width: @tablet-width) {
+    width: @wrapper-width-tablet;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+    margin: 53px auto 0 auto;
+  }
+}
+
+.main-header__toggler {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
