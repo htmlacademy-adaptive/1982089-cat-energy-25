@@ -1,9 +1,11 @@
 .present-suggestion {
+  @width: 280px;
   @height: 290px;
-  height: @height;
+  min-width: @width;
+  min-height: @height;
   background-image: url("../img/cat-in-bag.jpg");
   background-repeat: no-repeat;
-  background-size: 280px @height;
+  background-size: @width @height;
 }
 
 .present-suggestion__text {
@@ -16,4 +18,24 @@
   font-weight: 400;
   color: #ffffff;
   text-align: center;
+}
+
+.present-suggestion_image {
+  display: block;
+}
+
+.present-suggestion__wrapper {
+  width: @wrapper-width-mobile;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    width: @wrapper-width-desktop;
+  }
 }

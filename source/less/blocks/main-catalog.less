@@ -1,3 +1,40 @@
 .main-catalog__title {
+  position: relative;
+  left: calc(50% - @wrapper-width-mobile / 2);
+  display: inline-block;
   margin: 27px 0 49px 0;
+
+  @media (min-width: @tablet-width) {
+    left: calc(50% - @wrapper-width-tablet / 2);
+    margin: 64px auto 82px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: calc(50% - @wrapper-width-desktop / 2);
+    margin: 74px auto 84px auto;
+  }
+}
+
+.main-catalog__catalog {
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.main-catalog__extra-options {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
 }

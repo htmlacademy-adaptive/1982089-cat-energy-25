@@ -31,7 +31,7 @@
     </header>
     <main class="main-catalog">
       <h1 class="main-catalog__title title">Каталог продукции</h1>
-      <section class="catalog">
+      <section class="main-catalog__catalog catalog">
         <div class="catalog__wrapper">
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="catalog__list product-list list-style">
@@ -236,75 +236,87 @@
           </ul>
         </div>
       </section>
-      <section class="extra-options">
+      <section class="main-catalog__extra-options extra-options">
         <div class="extra-options__wrapper">
           <h2 class="extra-options__title subtitle">Дополнительные товары</h2>
-          <ul class="extra-options__list extra-products list-style">
-            <li class="extra-products__item extra-product">
-              <a class="extra-product__link link-style" href="#">
-                <h3 class="extra-product__title paragraph-subtitle">Сахарозаменитель</h3>
-              </a>
-              <dl class="extra-product__list list-style">
-                <div class="extra-product__item">
-                  <dt class="extra-product__number">200 Р.</dt>
-                  <dd class="extra-product__description">1 упаковка (100 г)</dd>
+          <div class="extra-options__container">
+            <ul class="extra-options__list extra-products list-style">
+              <li class="extra-products__item extra-product">
+                <div class="extra-product__container">
+                  <a class="extra-product__link link-style" href="#">
+                    <h3 class="extra-product__title paragraph-subtitle">Сахарозаменитель</h3>
+                  </a>
+                  <dl class="extra-product__list list-style">
+                    <div class="extra-product__item">
+                      <dt class="extra-product__number">200 Р.</dt>
+                      <dd class="extra-product__description">1 упаковка (100 г)</dd>
+                    </div>
+                  </dl>
                 </div>
-              </dl>
-              <a class="product-card__button button" href="#">заказать</a>
-            </li>
-            <li class="extra-products__item extra-product">
-              <a class="extra-product__link link-style" href="#">
-                <h3 class="extra-product__title paragraph-subtitle">питьевая вода</h3>
-              </a>
-              <dl class="extra-product__list list-style">
-                <div class="extra-product__item">
-                  <dt class="extra-product__number">50 Р.</dt>
-                  <dd class="extra-product__description">5 литров</dd>
+                <a class="product-card__button button" href="#">заказать</a>
+              </li>
+              <li class="extra-products__item extra-product">
+                <div class="extra-product__container">
+                  <a class="extra-product__link link-style" href="#">
+                    <h3 class="extra-product__title paragraph-subtitle">питьевая вода</h3>
+                  </a>
+                  <dl class="extra-product__list list-style">
+                    <div class="extra-product__item">
+                      <dt class="extra-product__number">50 Р.</dt>
+                      <dd class="extra-product__description">5 литров</dd>
+                    </div>
+                  </dl>
                 </div>
-              </dl>
-              <a class="product-card__button button" href="#">заказать</a>
-            </li>
-            <li class="extra-products__item extra-product">
-              <a class="extra-product__link link-style" href="#">
-                <h3 class="extra-product__title paragraph-subtitle">молоко</h3>
-              </a>
-              <dl class="extra-product__list list-style">
-                <div class="extra-product__item">
-                  <dt class="extra-product__number">100 Р.</dt>
-                  <dd class="extra-product__description">1 литр</dd>
+                <a class="product-card__button button" href="#">заказать</a>
+              </li>
+              <li class="extra-products__item extra-product">
+                <div class="extra-product__container">
+                  <a class="extra-product__link link-style" href="#">
+                    <h3 class="extra-product__title paragraph-subtitle">молоко</h3>
+                  </a>
+                  <dl class="extra-product__list list-style">
+                    <div class="extra-product__item">
+                      <dt class="extra-product__number">100 Р.</dt>
+                      <dd class="extra-product__description">1 литр</dd>
+                    </div>
+                  </dl>
                 </div>
-              </dl>
-              <a class="product-card__button button" href="#">заказать</a>
-            </li>
-            <li class="extra-products__item extra-product">
-              <a class="extra-product__link link-style" href="#">
-                <h3 class="extra-product__title paragraph-subtitle">витамины</h3>
-              </a>
-              <dl class="extra-product__list list-style">
-                <div class="extra-product__item">
-                  <dt class="extra-product__number">300 Р.</dt>
-                  <dd class="extra-product__description">1 упаковка (30 г)</dd>
+                <a class="product-card__button button" href="#">заказать</a>
+              </li>
+              <li class="extra-products__item extra-product">
+                <div class="extra-product__container">
+                  <a class="extra-product__link link-style" href="#">
+                    <h3 class="extra-product__title paragraph-subtitle">витамины</h3>
+                  </a>
+                  <dl class="extra-product__list list-style">
+                    <div class="extra-product__item">
+                      <dt class="extra-product__number">300 Р.</dt>
+                      <dd class="extra-product__description">1 упаковка (30 г)</dd>
+                    </div>
+                  </dl>
                 </div>
-              </dl>
-              <a class="product-card__button button" href="#">заказать</a>
-            </li>
-          </ul>
-          <div class="extra-options__present present-suggestion">
-            <img src="img/present.svg" alt="Подарок" width="78" height="80">
-            <p class="present-suggestion__text">Закажите все и получите чехол для кота в подарок!</p>
+                <a class="product-card__button button" href="#">заказать</a>
+              </li>
+            </ul>
+            <div class="extra-options__present present-suggestion">
+              <div class="present-suggestion__wrapper">
+                <img class="present-suggestion_image" src="img/present.svg" alt="Подарок" width="78" height="80">
+                <p class="present-suggestion__text">Закажите все и получите чехол для кота в подарок!</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="location--dark">
+      <article class="main-catalog__location location location--dark">
         <div class="location__wrapper">
           <h2 class="visually-hidden">Локация</h2>
-          <div class="location__info location-card location-card">
+          <div class="location__info location-card">
             <h3 class="location-card__slogan">приглашаем к сотрудничеству дилеров!</h3>
             <address class="location-card__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
           </div>
         </div>
-        <img src="img/location.png" alt="Месторасположение на карте" width="320" height="362">
-      </section>
+        <img class="location__map" src="img/location.png" alt="Месторасположение на карте" width="320" height="362">
+      </article>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
