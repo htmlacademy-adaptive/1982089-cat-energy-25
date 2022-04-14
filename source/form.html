@@ -33,67 +33,73 @@
       <h1 class="main-form__title title">Подбор программы</h1>
       <div class="main-form__wrapper">
         <form class="main-form__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="main-form__fieldset personal-info">
+          <div class="form__personal-info personal-info">
             <h2 class="visually-hidden">Общая информация</h2>
             <p class="personal-info__suggestion">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-            <p class="personal-info__field-group field-group field-group--name">
-              <label class="field-group__input-title" for="name-input">ИМЯ:*</label>
-              <input class="field-group__input-text" type="text" id="name-input" name="name-input" placeholder="барсик" required>
-            </p>
-            <p class="personal-info__field-group field-group field-group--weight">
-              <label class="field-group__input-title" for="weight-input">Вес (кг):*</label>
-              <input class="field-group__input-text" type="text" id="weight-input" name="weight-input" placeholder="7" required>
-            </p>
-            <p class="personal-info__field-group field-group field-group--age">
-              <label class="field-group__input-title" for="age-input">Возраст (лет):</label>
-              <input class="field-group__input-text" type="text" id="age-input" name="age-input" placeholder="7">
-            </p>
-            <fieldset class="main-form__fieldset programm-choice">
-              <legend class="visually-hidden">Выбор программы</legend>
-              <ul class="programm-choice__list choices-list list-style">
-                <li class="choices-list__item">
-                  <label class="choices-list__control">
-                    <input class="choices-list__radio" type="radio" name="choice" value="похудение" checked>
-                    <span class="choices-list__mark"></span>
-                    <span class="choices-list__label">похудение</span>
-                  </label>
-                </li>
-                <li class="choices-list__item">
-                  <label class="choices-list__control">
-                    <input class="choices-list__radio" type="radio" name="choice" value="Набор массы">
-                    <span class="choices-list__mark"></span>
-                    <span class="choices-list__label">Набор массы</span>
-                  </label>
-                </li>
-                <li class="choices-list__item">
-                  <label class="choices-list__control">
-                    <input class="choices-list__radio" type="radio" name="choice" value="Не знаю">
-                    <span class="choices-list__mark"></span>
-                    <span class="choices-list__label">Не знаю (Нужен ваш совет)</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+            <div class="personal-info__wrapper">
+              <div class="personal-info__field-container">
+                <p class="personal-info__field-group field-group field-group--name">
+                  <label class="field-group__input-title" for="name-input">ИМЯ:*</label>
+                  <input class="field-group__input-text" type="text" id="name-input" name="name-input" placeholder="барсик" required>
+                </p>
+                <p class="personal-info__field-group field-group field-group--weight">
+                  <label class="field-group__input-title" for="weight-input">Вес (кг):*</label>
+                  <input class="field-group__input-text" type="text" id="weight-input" name="weight-input" placeholder="7" required>
+                </p>
+                <p class="personal-info__field-group field-group field-group--age">
+                  <label class="field-group__input-title" for="age-input">Возраст (лет):</label>
+                  <input class="field-group__input-text" type="text" id="age-input" name="age-input" placeholder="7">
+                </p>
+              </div>
+              <fieldset class="main-form__fieldset programm-choice">
+                <legend class="visually-hidden">Выбор программы</legend>
+                <ul class="programm-choice__list choices-list list-style">
+                  <li class="choices-list__item">
+                    <label class="choices-list__control">
+                      <input class="choices-list__radio" type="radio" name="choice" value="похудение" checked>
+                      <span class="choices-list__mark"></span>
+                      <span class="choices-list__label">похудение</span>
+                    </label>
+                  </li>
+                  <li class="choices-list__item">
+                    <label class="choices-list__control">
+                      <input class="choices-list__radio" type="radio" name="choice" value="Набор массы">
+                      <span class="choices-list__mark"></span>
+                      <span class="choices-list__label">Набор массы</span>
+                    </label>
+                  </li>
+                  <li class="choices-list__item">
+                    <label class="choices-list__control">
+                      <input class="choices-list__radio" type="radio" name="choice" value="Не знаю">
+                      <span class="choices-list__mark"></span>
+                      <span class="choices-list__label">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
           </div>
-          <div class="main-form__fieldset contacts">
+          <div class="form__contacts contacts">
             <h2 class="contacts__title subtitle">Контактные данные (владельца кота)</h2>
-            <p class="contacts__field-group field-group field-group--email">
-              <label class="field-group__input-title" for="email-input">E-mail:*</label>
-              <input class="field-group__input-text" type="email" id="email-input" name="email-input" placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p class="contacts__field-group field-group field-group--tel">
-              <label class="field-group__input-title" for="tel-input">Телефон:*</label>
-              <input class="field-group__input-text" type="tel" id="tel-input" name="tel-input" placeholder="8 (960) 900-60-90" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-            </p>
+            <div class="contacts__field-container">
+              <p class="contacts__field-group field-group field-group--email">
+                <label class="field-group__input-title" for="email-input">E-mail:*</label>
+                <input class="field-group__input-text" type="email" id="email-input" name="email-input" placeholder="kuklachev@gmail.com" required>
+              </p>
+              <p class="contacts__field-group field-group field-group--tel">
+                <label class="field-group__input-title" for="tel-input">Телефон:*</label>
+                <input class="field-group__input-text" type="tel" id="tel-input" name="tel-input" placeholder="8 (960) 900-60-90" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+              </p>
+            </div>
           </div>
-          <div class="main-form__fieldset comment">
+          <div class="form__comment comment">
             <h2 class="comment__title subtitle">Комментарий</h2>
             <p class="comment__field field-text">
               <label class="visually-hidden" for="story">Рассказ о вашем коте</label>
               <textarea class="field-text__textarea" name="story" id="story" cols="33" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
             </p>
           </div>
-          <div class="main-form__fieldset more-options">
+          <div class="form__more-options more-options">
             <h2 class="more-options__title subtitle">Дополнительно</h2>
             <fieldset class="more-options__fieldset extra-goods">
               <legend class="visually-hidden">Дополнительные продукты</legend>
@@ -107,21 +113,21 @@
                 </li>
                 <li class="goods-list__item">
                   <label class="goods-list__control">
-                    <input class="goods-list__checkbox" type="checkbox" name="water" checked>
+                    <input class="goods-list__checkbox" type="checkbox" name="water">
                     <span class="goods-list__mark"></span>
                     <span class="goods-list__label">питьевая вода</span>
                   </label>
                 </li>
                 <li class="goods-list__item">
                   <label class="goods-list__control">
-                    <input class="goods-list__checkbox" type="checkbox" name="milk" checked>
+                    <input class="goods-list__checkbox" type="checkbox" name="milk">
                     <span class="goods-list__mark"></span>
                     <span class="goods-list__label">молоко</span>
                   </label>
                 </li>
                 <li class="goods-list__item">
                   <label class="goods-list__control">
-                    <input class="goods-list__checkbox" type="checkbox" name="vitamins" checked>
+                    <input class="goods-list__checkbox" type="checkbox" name="vitamins">
                     <span class="goods-list__mark"></span>
                     <span class="goods-list__label">витамины</span>
                   </label>
@@ -129,11 +135,13 @@
               </ul>
             </fieldset>
           </div>
-          <button class="form__button button" type="submit">отправить заявку</button>
-          <p class="form__note">* — Обязательные поля</p>
+          <div class="form__submit-container">
+            <button class="form__button button" type="submit">отправить заявку</button>
+            <p class="form__note">* — Обязательные поля</p>
+          </div>
         </form>
       </div>
-      <section class="location--dark">
+      <article class="main-form__location location location--dark">
         <div class="location__wrapper">
           <h2 class="visually-hidden">Локация</h2>
           <div class="location__info location-card">
@@ -141,8 +149,8 @@
             <address class="location-card__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
           </div>
         </div>
-        <img src="img/location.png" alt="Месторасположение на карте" width="320" height="362">
-      </section>
+        <img class="location__map" src="img/location.png" alt="Месторасположение на карте" width="320" height="362">
+      </article>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">

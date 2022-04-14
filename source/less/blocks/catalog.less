@@ -1,8 +1,12 @@
-.catalog {
-  margin-bottom: 50px;
-}
-
 .catalog__wrapper {
-  width: 280px;
+  width: @wrapper-width-mobile;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+  }
 }
