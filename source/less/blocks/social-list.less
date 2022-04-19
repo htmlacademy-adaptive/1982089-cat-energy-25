@@ -1,5 +1,47 @@
 .social-list {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   width: 132px;
+  height: 63px;
+  margin-bottom: 22px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -74px;
+    width: @wrapper-width-mobile;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+  &::after {
+    top: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 22px;
+    margin-bottom: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.social-list__link {
+  &:hover {
+    svg path {
+      fill: @contrast-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

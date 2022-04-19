@@ -1,9 +1,51 @@
 .stats-info {
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
   }
 }
+
+.stats-info__summary {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: 11px;
+    font-size: 20px;
+    text-align: end;
+
+    & br {
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    text-align: start;
+
+    & br {
+      display: none;
+    }
+
+    & span {
+      display: inline-block;
+      width: 63px;
+    }
+  }
+}
+

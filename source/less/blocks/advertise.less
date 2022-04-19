@@ -1,9 +1,11 @@
 .advertise__wrapper {
+  position: relative;
   width: @wrapper-width-mobile;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     width: @wrapper-width-tablet;
   }
 
@@ -14,21 +16,57 @@
 
 .advertise__slogan {
   margin: 0;
+  margin-bottom: 29px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
   color: #ffffff;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    left: 59px;
+    width: max-content;
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
     color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 80px;
+    margin-bottom: 52px;
   }
 }
 
 .advertise__background-image {
+  display: block;
+  margin-bottom: 3px;
+
   @media (min-width: @tablet-width) {
     position: absolute;
+    top: 40px;
+    left: 50% -354px;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -242px;
+    left: 448px;
+  }
+}
+
+.advertise__button {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 80px;
   }
 }

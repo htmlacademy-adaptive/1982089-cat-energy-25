@@ -1,3 +1,77 @@
+.range {
+  display: flex;
+}
+
+.range__scale {
+  position: relative;
+  width: 85px;
+  height: 14px;
+  margin: 0 14px;
+  border-radius: 6px;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    top: 14px;
+    width: 426px;
+    height: 6px;
+    margin: 0 23px;
+    border-radius: 6px;
+    background-color: #dcdcdc;
+  }
+}
+
+.range__bar {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 36px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: @contrast-color;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: -13px;
+    width: 426px;
+    height: 6px;
+    margin: 0 23px;
+    border-radius: 6px;
+    background-color: #dcdcdc;
+  }
+}
+
+.range__button {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -17px;
+    left: 196px;
+    z-index: 2;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 8px;
+      height: 8px;
+      background-color: @contrast-color;
+      border-radius: 50%;
+    }
+  }
+}
+
 .range__option {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -5,4 +79,9 @@
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
