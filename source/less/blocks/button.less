@@ -5,6 +5,7 @@
   line-height: 20px;
   font-weight: 400;
   color: #ffffff;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #69b738;
@@ -12,8 +13,24 @@
   cursor: pointer;
 
   &--main {
+    padding: 11px 73px;
     font-size: 14px;
     line-height: 18px;
+
+    @media (min-width: @tablet-width) {
+      width: 244px;
+      display: block;
+      padding: 14px 26px;
+      font-size: 20px;
+    }
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: #8ec36d;
   }
 
   &--disabled {

@@ -6,7 +6,9 @@
   width: @mobile-width;
   margin: 0 auto;
   margin-bottom: 20px;
-  background-image: url("../img/cat-with-tongue.jpg");
+  padding-top: 27px;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-with-tongue-mobile.jpg");
   background-repeat: no-repeat;
   background-size: 320px 302px;
   background-position: top center;
@@ -15,17 +17,32 @@
     width: @tablet-width;
     min-height: 850px;
     margin-bottom: 0;
+    padding-top: 40px;
     background-image: none;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    min-height: 694px;
+    min-height: 553px;
     margin-bottom: 82px;
-    background-image: url("../img/cat-with-tongue.jpg");
-    background-repeat: no-repeat;
-    background-size: 720px 694px;
-    background-position: top right;
+    padding-top: 82px;
+  }
+}
+
+.main-index__title {
+  margin-bottom: 25px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    left: 87px;
+    display: inline-block;
+    margin-bottom: 41px;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 190px;
   }
 }
 
@@ -49,6 +66,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 26px;
+    margin-bottom: 29px;
   }
 }

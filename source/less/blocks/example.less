@@ -28,28 +28,48 @@
 
   @media (min-width: @tablet-width) {
     width: @wrapper-width-tablet;
+    padding: 43px 0 55px 0;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     width: @wrapper-width-desktop;
+    padding-bottom: 65px;
   }
 }
 
 .example__title {
   line-height: 40px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__text {
-  margin-top: 40px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 63px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
-    margin-top: 146px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__first-part {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 75px;
   }
 }
