@@ -1,3 +1,43 @@
+.product-info__link {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 21px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product-info__title {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #222222;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 21px;
+  }
+}
+
 .product-info__number {
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -5,6 +45,11 @@
   line-height: 16px;
   font-weight: 400;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .product-info__description {
@@ -15,10 +60,67 @@
   line-height: 16px;
   font-weight: 400;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .product-info__item {
+  width: 140px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 2px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 247px;
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -9px;
+      width: 250px;
+      height: 1px;
+      background-color: #cdcdcd;
+
+      @media (min-width: @desktop-width) {
+        bottom: -10px;
+        width: 169px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 166px;
+  }
+}
+
+.product-info__name-gap {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.product-info__weight-gap {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
 }

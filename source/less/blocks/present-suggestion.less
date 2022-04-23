@@ -1,16 +1,39 @@
 .present-suggestion {
   @width: 280px;
   @height: 290px;
+  // @width: 707px;
+  // @height: 200px;
+  // @width: 245px;
+  // @height: 288px;
   min-width: @width;
   min-height: @height;
-  background-image: url("../img/cat-in-bag.jpg");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-in-bag.jpg");
   background-repeat: no-repeat;
   background-size: @width @height;
+  background-position: top center;
+}
+
+.present-suggestion__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: @wrapper-width-mobile;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .present-suggestion__text {
   width: 161px;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -18,24 +41,27 @@
   font-weight: 400;
   color: #ffffff;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 71px 124px 0 0;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .present-suggestion_image {
   display: block;
-}
-
-.present-suggestion__wrapper {
-  width: @wrapper-width-mobile;
-  margin: 0 auto;
+  margin: 58px auto 48px auto;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    width: @wrapper-width-tablet;
+    margin: 57px 0 0 77px;
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: column;
-    width: @wrapper-width-desktop;
+    margin: 55px auto 46px auto;
   }
 }

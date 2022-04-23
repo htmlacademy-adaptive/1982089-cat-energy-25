@@ -3,13 +3,47 @@
   grid-template-columns: 280px;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 324px 324px;
     gap: 60px;
   }
 
   @media (min-width: 1440px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
     row-gap: 63px;
+  }
+}
+
+.product-list__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: @mobile-width;
+    height: 1px;
+    background-color: #ebebeb;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: @mobile-width;
+      height: 1px;
+      background-color: #ebebeb;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
   }
 }
