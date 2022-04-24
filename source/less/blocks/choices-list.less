@@ -1,4 +1,7 @@
 .choices-list__label {
+  position: relative;
+  top: 9px;
+  margin-left: 45px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -6,4 +9,72 @@
   font-weight: 400;
   color: #222222;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 60px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.choices-list__item {
+  height: 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 40px;
+  }
+}
+
+.choices-list__control {
+  position: relative;
+
+  &:hover {
+    .choices-list__mark {
+      border-color: #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.choices-list__mark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: -10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.choices-list__radio[type="radio"]:checked + .choices-list__mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 13.5px;
+  height: 13.5px;
+  background-color: @contrast-color;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }

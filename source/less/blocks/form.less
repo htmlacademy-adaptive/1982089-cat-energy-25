@@ -5,6 +5,32 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin: auto 0;
+    font-size: 16px;
+  }
+}
+
+.form__button {
+  width: 280px;
+  display: block;
+  padding: 10px calc((280px - 100%) / 2);
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    margin-bottom: 0;
+    margin-right: 61px;
+    padding: 13px calc((280px - 100%) / 2);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-right: 81px;
+  }
 }
 
 .form__personal-info {
@@ -55,8 +81,24 @@
   }
 }
 
-.form__submit-container {
+.form__submit-wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
+  }
+}
+
+.form__submit-container {
+  width: @wrapper-width-mobile;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @wrapper-width-tablet;
+    padding: 0 39px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+    padding: 0;
   }
 }

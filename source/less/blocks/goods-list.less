@@ -1,4 +1,7 @@
 .goods-list__label {
+  position: relative;
+  top: 8px;
+  margin-left: 48px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -6,11 +9,17 @@
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 59px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .goods-list {
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: @wrapper-width-mobile;
   row-gap: 13px;
 
   @media (min-width: 768px) {
@@ -22,5 +31,54 @@
   @media (min-width: 1440px) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 104px;
+  }
+}
+
+.goods-list__item {
+  min-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 40px;
+  }
+}
+
+.goods-list__control {
+  position: relative;
+
+  &:hover {
+    .goods-list__mark {
+      border-color: #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.goods-list__mark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    top: -10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.goods-list__checkbox[type="checkbox"]:checked + .goods-list__mark {
+  background-image: url(../../img/icons/check-mark.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-size: 26px 26px;
   }
 }
