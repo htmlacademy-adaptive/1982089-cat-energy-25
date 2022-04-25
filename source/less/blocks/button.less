@@ -12,6 +12,10 @@
   border: none;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+
   &--main {
     padding: 11px 73px;
     font-size: 14px;
@@ -36,5 +40,13 @@
   &--disabled {
     color: #444444;
     background-color: #f2f2f2;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: #b9b9b9;
+    }
   }
 }

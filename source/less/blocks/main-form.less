@@ -5,26 +5,13 @@
   margin: 27px 0 37px 0;
 
   @media (min-width: @tablet-width) {
-    left: calc(50% - @wrapper-width-tablet / 2);
+    left: calc(50% - (@wrapper-width-tablet / 2) + 39px);
     margin: 64px auto 54px auto;
   }
 
   @media (min-width: @desktop-width) {
     left: calc(50% - @wrapper-width-desktop / 2);
     margin: 73px auto 56px auto;
-  }
-}
-
-.main-form__wrapper {
-  width: @wrapper-width-mobile;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: @wrapper-width-tablet;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @wrapper-width-desktop;
   }
 }
 

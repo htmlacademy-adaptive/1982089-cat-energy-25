@@ -1,24 +1,39 @@
 .extra-product__title {
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 20px;
+  }
 }
 
-.extra-product__number {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
-  color: #444444;
+.extra-product__link {
+  display: inline-block;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    margin-left: 0;
+  }
 }
 
 .extra-product__description {
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
-  color: #444444;
+}
+
+.extra-product__number {
+  @media (min-width: @tablet-width) {
+    width: 88px;
+    text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 53px;
+    text-align: start;
+  }
 }
 
 .extra-product {
@@ -28,15 +43,77 @@
   }
 }
 
+.extra-product__list {
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    margin-right: 38px;
+  }
+}
+
 .extra-product__item {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 288px;
+  }
 }
 
 .extra-product__container {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+}
+
+.extra-product__button {
+  @width: @wrapper-width-mobile;
+  width: @width;
+  display: block;
+  padding: 10px calc((@width - 100%) / 2);
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    @width: 100%;
+    display: inline-block;
+    width: @width;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px calc((@width - 100%) / 2);
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    @width: 244px;
+    width: @width;
+    margin: 0;
+    margin-left: auto;
+    padding: 10px calc((@width - 100%) / 2);
   }
 }

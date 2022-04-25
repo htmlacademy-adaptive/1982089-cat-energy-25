@@ -1,5 +1,37 @@
 .programm-choice {
+  position: relative;
   margin: 0;
   padding: 22px 0 19px 0;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 29px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 568px;
+    margin-left: 80px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: @mobile-width;
+    height: 1px;
+    background-color: #d9d9d9;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    top: 100%;
+    bottom: 0;
+  }
 }

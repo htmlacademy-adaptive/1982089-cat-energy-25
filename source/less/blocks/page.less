@@ -13,11 +13,13 @@
   color: #000000;
   background-color: #ffffff;
 
-  @media (min-width: @desktop-width) {
-    @image-width: 694px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-with-tongue.jpg");
-    background-repeat: no-repeat;
-    background-size: 720px @image-width;
-    background-position: top right calc(50% - (@image-width / 2) - 12px);
+  &--index {
+    @media (min-width: @desktop-width) {
+      @image-height: 694px;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-with-tongue.jpg");
+      background-repeat: no-repeat;
+      background-size: 720px @image-height;
+      background-position: top right calc(50% - (@image-height / 2) - 12px);
+    }
   }
 }
