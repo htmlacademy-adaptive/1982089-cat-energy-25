@@ -1,16 +1,37 @@
 .present-suggestion {
   @width: 280px;
   @height: 290px;
-  // @width: 707px;
-  // @height: 200px;
-  // @width: 245px;
-  // @height: 288px;
   min-width: @width;
   min-height: @height;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-in-bag.jpg");
   background-repeat: no-repeat;
   background-size: @width @height;
   background-position: top center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-in-bag@2x.jpg");
+    background-size: 280px 290px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-in-bag-tablet.jpg");
+    background-size: 707px 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-in-bag-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 288px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-in-bag-desktop.jpg");
+    background-size: 245px 288px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-in-bag-desktop@2x.jpg");
+    }
+  }
 }
 
 .present-suggestion__wrapper {

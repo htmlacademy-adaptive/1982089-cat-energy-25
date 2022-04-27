@@ -13,6 +13,10 @@
   background-size: 320px 302px;
   background-position: top center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-with-tongue-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     width: @tablet-width;
     min-height: 850px;
