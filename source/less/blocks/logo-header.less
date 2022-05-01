@@ -13,8 +13,27 @@
   &:active {
     opacity: 0.6;
   }
+
+  &--name {
+    display: block;
+    margin-top: 13px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .logo-header__image {
   margin-right: 57px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
 }
