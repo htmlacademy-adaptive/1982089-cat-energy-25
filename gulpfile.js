@@ -30,35 +30,37 @@ csso()
 
 // HTML
 
-const html = () => {
+export const html = () => {
 return gulp.src('source/*.html')
+.pipe(htmlmin({ collapseWhitespace: true }))
 .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
 return gulp.src('source/js/script.js')
+.pipe(terser())
 .pipe(gulp.dest('build/js'))
 .pipe(browser.stream());
 }
 
 // Images
 
-const optimizeImages = () => {
+export const optimizeImages = () => {
 return gulp.src('source/img/**/*.{png,jpg}')
 .pipe(squoosh())
 .pipe(gulp.dest('build/img'))
 }
 
-const copyImages = () => {
+export const copyImages = () => {
 return gulp.src('source/img/**/*.{png,jpg}')
 .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
-const createWebp = () => {
+export const createWebp = () => {
 return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/*.*'])
 .pipe(squoosh({
 webp: {}
@@ -68,38 +70,30 @@ webp: {}
 
 // SVG
 
-const svg = () =>
-gulp.src(['source/img/.svg', '!source/img/sprite/.svg'])
-.pipe(svgo())
-.pipe(gulp.dest('build/img'));
-
-const sprite = () => {
-return gulp.src('source/img/sprite/*.svg')
-.pipe(svgo())
-.pipe(svgstore({
-inlineSvg: true
-}))
-.pipe(rename('sprite.svg'))
-.pipe(gulp.dest('build/img'));
+export const svg = () => {
+  return gulp.src(['source/img/**/*.svg','!source/img/sprite.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'))
 }
 
 // Copy
 
-const copy = (done) => {
-gulp.src([
-'source/fonts/.{woff2,woff}',
-'source/.ico',
-'source/*.webmanifest',
-], {
-base: 'source'
-})
-.pipe(gulp.dest('build'))
-done();
+export const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest',
+    'source/img/sprite.svg',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
 }
 
 // Clean
 
-const clean = () => {
+export const clean = () => {
 return del('build');
 };
 
@@ -143,7 +137,6 @@ styles,
 html,
 scripts,
 svg,
-sprite,
 createWebp
 ),
 );
@@ -159,7 +152,6 @@ styles,
 html,
 scripts,
 svg,
-sprite,
 createWebp
 ),
 gulp.series(
