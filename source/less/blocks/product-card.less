@@ -42,11 +42,24 @@
     }
 
     .product-card__title {
+      margin: 0;
+      font-family: "Oswald", sans-serif;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 400;
       color: #111111;
+      text-transform: uppercase;
 
       @media (min-width: @tablet-width) {
         width: 134px;
         text-align: center;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @media (min-width: @desktop-width) {
+        line-height: 21px;
       }
     }
 
