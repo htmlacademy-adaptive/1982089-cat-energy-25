@@ -3,6 +3,7 @@
 }
 
 .page__body {
+  position: relative;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -16,13 +17,24 @@
   &--index {
     @media (min-width: @desktop-width) {
       @image-height: 694px;
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-with-tongue.webp");
+      background-image: url("../img/cat-with-tongue.webp");
       background-repeat: no-repeat;
       background-size: 720px @image-height;
       background-position: top right calc(50% - (@image-height / 2) - 12px);
 
       @media (min-resolution: 2dppx) {
-        background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-with-tongue@2x.webp");
+        background-image: url("../img/cat-with-tongue@2x.webp");
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(50% - 1px);
+        z-index: -3;
+        width: 720px;
+        height: 694px;
+        background-color: rgba(104, 183, 56, 0.85);
       }
     }
   }
