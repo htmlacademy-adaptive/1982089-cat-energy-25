@@ -82,3 +82,17 @@
     margin-bottom: 31px;
   }
 }
+
+.facts-list__text {
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
